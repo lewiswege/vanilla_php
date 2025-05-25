@@ -1,16 +1,5 @@
 <?php
 
-$uri = $_SERVER['REQUEST_URI'];
-
-
-$routes = [
-    '/' => 'controllers/index.php',
-    '/about' => 'controllers/about.php',
-    '/notes' => 'controllers/notes.php',
-    '/note' => 'controllers/note.php',
-    '/contact' => 'controllers/contact.php',
-];
-
 function routeToController($uri, $routes){
     if (array_key_exists($uri, $routes)) {
         require $routes[$uri];
@@ -27,4 +16,6 @@ function abort($statusCode = 404) {
     die();
 }
 
+
+$uri = $_SERVER['REQUEST_URI'];
 routeToController($uri, $routes);
