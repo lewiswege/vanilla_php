@@ -6,4 +6,5 @@ $routes = [
     '/notes' => 'controllers/notes.php',
     '/note' => 'controllers/note.php',
     '/contact' => 'controllers/contact.php',
+    'notes/create' => 'controllers/note-create.php',
 ];
