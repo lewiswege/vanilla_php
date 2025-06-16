@@ -1,5 +1,7 @@
 <?php
 
+$_SESSION['name'] = "Lewis";
+
 use Core\App;
 use Core\Database;
 
